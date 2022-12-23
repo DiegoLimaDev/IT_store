@@ -1,0 +1,44 @@
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-items {
+  color: var(--dark-blue);
+  cursor: pointer;
+  margin: 0 4rem;
+  font-size: 3rem;
+  list-style-type: none;
+
+  :hover {
+    transform: scale(1.2);
+    transition: all 300ms ease-in-out;
+  }
+}
+
+.icon {
+  font-size: 1.9rem;
+}
+
+.search-container {
+  @extend .row;
+  float: right;
+  margin-right: 3rem;
+}
+
+
+.button {
+  background-color: #e3e3e3;
+  border-radius: 10%;
+  border-width: 0;
+  cursor: pointer;
+
+  :hover{
+    transform: scale(1.2);
+    transition: all 200ms ease-in-out;
+  }
+}
+
+.input {
+  outline: none;
+}

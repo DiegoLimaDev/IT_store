@@ -1,0 +1,29 @@
+<div>
+  <ul class="row">
+    <li class="menu-items">
+      <p>Produtos</p>
+    </li>
+    <li class="menu-items">
+      <p>Carrinho</p>
+    </li>
+    <li class="menu-items">
+      <p>Contatos</p>
+    </li>
+    <li class="menu-items">
+      <p>Categorias</p>
+    </li>
+  </ul>
+  <div class="search-container">
+    <input
+      type="text"
+      class="input"
+      [(ngModel)]="search"
+      placeholder="Pesquisar produto"
+    />
+    <div class="on-hover">
+      <button class="button">
+        <i class="iconify icon" data-icon="ic:twotone-search"></i>
+      </button>
+    </div>
+  </div>
+</div>

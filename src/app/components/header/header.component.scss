@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+  background-color: var(--light-orange);
+  margin: -.9rem -.5rem 0 -1rem;
+  padding: 1rem;
+}
+
+.title {
+  font-size: 8rem;
+
+  .title-1 {
+    color: var(--dark-blue);
+    font-size: 8rem;
+
+  }
+
+  .title-2{
+    color: var(--green);
+    font-size: 8rem;
+
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
