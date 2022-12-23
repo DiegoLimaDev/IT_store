@@ -7,7 +7,9 @@
     {
       "files": [
         "*.ts",
-        "*.html"
+        "*.html",
+        "*.scss",
+        "*.css"
       ],
       "extends": [
         "eslint:recommended",
