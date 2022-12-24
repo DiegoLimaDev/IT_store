@@ -1,3 +1,5 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
 html {
   font-size: 62.5%;
 }
@@ -8,4 +10,5 @@ html {
   --light-orange: #E6986A;
   --strong-green: #3F992F;
   --green: #55E63C;
+  --white: #e3e3e3;
 }
