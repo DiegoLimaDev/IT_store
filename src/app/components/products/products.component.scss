@@ -1,0 +1,38 @@
+.container {
+  padding: 4rem 2rem;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: 2fr 2fr 2fr 2fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  gap: 2rem;
+}
+
+.list-products {
+  margin: 2rem 4rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.product-name {
+  font-size: 2rem;
+  color: var(--dark-blue);
+  width: 80%;
+}
+
+.product-price {
+  font-size: 2rem;
+  color: var(--light-orange);
+}
+
+.product-paymethod {
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}

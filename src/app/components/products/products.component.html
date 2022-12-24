@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="list_products" *ngFor="let e of products">
+    <img [src]="e.img" class="img" />
+    <p class="product-name">{{ e.description }}</p>
+    <p class="product-price">{{ e.price | currency : "BRL" }}</p>
+    <p class="product-paymethod">{{ e.paymethod }}</p>
+    <app-button
+      title="Comprar"
+      width="12rem"
+      height="4rem"
+      (click)="goToDetails(e.id)"
+    ></app-button>
+  </div>
+</div>
