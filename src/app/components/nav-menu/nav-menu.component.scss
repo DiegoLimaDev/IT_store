@@ -20,6 +20,17 @@
   font-size: 1.9rem;
 }
 
+.badge {
+  font-size: 1.5rem;
+  top: -1.6rem;
+  right: 0.5rem;
+  position: relative;
+  color: var(--green);
+  background-color: var(--blue);
+  border-radius: 50%;
+
+}
+
 .search-container {
   @extend .row;
   float: right;
