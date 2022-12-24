@@ -1,0 +1,14 @@
+.button {
+  border-radius: 2rem;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border-width: 0;
+  cursor: pointer;
+
+
+}
+
+.button:hover{
+  transform: scale(1.2);
+  transition: all 200ms ease-in-out;
+}
