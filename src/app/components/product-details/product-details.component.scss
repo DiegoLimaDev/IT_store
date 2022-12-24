@@ -1,0 +1,56 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+.img {
+  height: 30rem;
+  width: 30rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  column-gap: -30rem;
+}
+
+.name {
+  color: var(--dark-blue);
+  font-size: 3rem;
+}
+
+.price {
+  color: var(--dark-blue);
+  font-size: 3rem;
+}
+
+.paymethod {
+  color: var(--dark-blue);
+  font-size: 2rem;
+
+}
+
+.amount {
+  @extend .stock;
+}
+
+.stock {
+  color: var(--dark-blue);
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.qty {
+  width: 5rem;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.button {
+  margin-top: 3rem;
+}

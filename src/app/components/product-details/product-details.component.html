@@ -1,0 +1,34 @@
+<div class="container">
+  <img [src]="this.productDetails?.img" class="img" />
+  <div class="details">
+    <span class="name">{{ this.productDetails?.description }}</span>
+    <br />
+    <span class="price">{{
+      this.productDetails?.price | currency : "BRL"
+    }}</span>
+    <br />
+    <span class="paymethod">{{ this.productDetails?.paymethod }}</span>
+    <br />
+    <div class="row">
+      <label for="amount" class="amount"
+        >Quantidade:
+        <input
+          type="number"
+          class="qty"
+          min="1"
+          [max]="this.maxToBuy"
+          [(ngModel)]="this.maxToBuy"
+        />
+        unidades</label
+      >
+    </div>
+    <span class="stock">{{ productDetails?.stock }} unidade(s) diponíveis</span>
+    <app-button
+      title="Adicionar ao carrinho"
+      height="4rem"
+      width="20rem"
+      class="button"
+      (click)="this.addToCart()"
+    ></app-button>
+  </div>
+</div>
