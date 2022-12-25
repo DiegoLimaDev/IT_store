@@ -1,0 +1,51 @@
+<div class="container">
+  <p class="title">Carrinho</p>
+  <div *ngIf="this.cartService.BuyList.length === 0; else cartNotEmpty">
+    <p class="subtitle">Seu carrinho ainda está vazio!</p>
+  </div>
+  <ng-template #cartNotEmpty>
+    <div class="map" *ngFor="let e of this.cartService.BuyList">
+      <div class="first-column">
+        <img class="img" [src]="e?.img" />
+        <div class="info">
+          <span class="name">{{ e?.description }}</span>
+        </div>
+      </div>
+      <div class="second-column">
+        <span class="price">Preço: </span>
+        <span class="price">{{ e?.price | currency : "BRL" }}</span>
+      </div>
+      <div class="third-column">
+        <label for="qty" class="amount"
+          >Quantidade:
+          <input
+            type="number"
+            min="1"
+            [max]="e.stock"
+            [(ngModel)]="e.qty"
+            (change)="this.getTotalPrice()"
+          />
+          unidade(s)
+        </label>
+      </div>
+      <div class="fourth-column" (click)="this.deleteItem(e.id)" role="button">
+        <i
+          class="iconify icon"
+          data-icon="ic:baseline-remove-circle-outline"
+        ></i>
+      </div>
+    </div>
+    <p class="total-price" *ngIf="this.cartService.BuyList?.length">
+      Total: {{ this.totalPrice | currency : "BRL" }}
+    </p>
+    <div class="button-container">
+      <app-button
+        title="Finalizar compra"
+        width="14rem"
+        height="4rem"
+        (click)="this.transactionCompleted()"
+        class="buy-button"
+      ></app-button>
+    </div>
+  </ng-template>
+</div>
