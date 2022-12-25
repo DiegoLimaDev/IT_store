@@ -1,13 +1,20 @@
 <div>
   <ul class="row">
-    <li class="menu-items">
+    <li class="menu-items" (click)="this.router.navigate([''])">
       <p>Produtos</p>
     </li>
-    <li class="menu-items">
+    <li class="menu-items" (click)="this.router.navigate(['cart'])">
       <p>
         Carrinho
         <i class="iconify icon" data-icon="carbon:shopping-cart"></i
-        ><span class="badge">15</span>
+        ><span
+          [ngClass]="this.cartService.BuyList.length >= 1 ? 'badge' : ''"
+          >{{
+            this.cartService.BuyList.length >= 1
+              ? this.cartService.BuyList.length
+              : ""
+          }}</span
+        >
       </p>
     </li>
     <li class="menu-items">
@@ -24,9 +31,9 @@
       [(ngModel)]="search"
       placeholder="Pesquisar produto"
     />
-    <div class="on-hover">
+    <div>
       <button class="button">
-        <i class="iconify icon" data-icon="ic:twotone-search"></i>
+        <i class="iconify search-icon" data-icon="ic:twotone-search"></i>
       </button>
     </div>
   </div>

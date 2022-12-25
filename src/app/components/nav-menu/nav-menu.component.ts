@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CartService } from 'src/app/services/cart/cart.service';
 
 @Component({
   selector: 'app-nav-menu',
@@ -7,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class NavMenuComponent {
   search = '';
+
+  constructor(public cartService: CartService, public router: Router) {}
 }
