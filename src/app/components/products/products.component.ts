@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductsService } from 'src/app/services/products.service';
+import { ProductsService } from 'src/app/services/products/products.service';
 import { IProducts } from 'src/app/types/products';
 
 @Component({
