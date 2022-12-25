@@ -7,6 +7,10 @@ export interface IProducts {
   stock: number;
 }
 
+export interface ICartProducts extends IProducts {
+  qty: number;
+}
+
 export const products = [
   {
     id: 1,
