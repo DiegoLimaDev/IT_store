@@ -19,15 +19,11 @@
 }
 
 .icon {
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   margin-top: 0.3rem;
   color: var(--dark-blue);
 }
 
-.search-icon {
-  @extend .icon;
-  color: var(--white);
-}
 
 .badge {
   padding: 0 5px;
@@ -41,29 +37,5 @@
   width: 5rem;
   height: 5rem;
   z-index: 5;
-}
-
-.search-container {
-  @extend .row;
-  float: right;
-  margin-right: 3rem;
-}
-
-
-.button {
-  background-color: var(--dark-blue);
-  border-radius: 10%;
-  border-width: 0;
-  cursor: pointer;
-
-  :hover{
-    transform: scale(1.2);
-    transition: all 200ms ease-in-out;
-  }
-}
-
-
-.input {
-  outline: none;
 }
 
