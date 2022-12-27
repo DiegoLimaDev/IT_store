@@ -1,14 +1,27 @@
-<div class="container">
-  <div class="list_products" *ngFor="let e of products">
-    <img [src]="e.img" class="img" />
-    <p class="product-name">{{ e.description }}</p>
-    <p class="product-price">{{ e.price | currency : "BRL" }}</p>
-    <p class="product-paymethod">{{ e.paymethod }}</p>
-    <app-button
-      title="Comprar"
-      width="12rem"
-      height="4rem"
-      (click)="goToDetails(e.id)"
-    ></app-button>
+<div class="max-container">
+  <div class="search-container">
+    <input
+      type="text"
+      class="input"
+      placeholder="Pesquisar produto"
+      [(ngModel)]="search"
+    />
+    <button type="button" class="button" (click)="this.filteringSearch(search)">
+      <i class="iconify search-icon" data-icon="ic:twotone-search"></i>
+    </button>
+  </div>
+  <div class="container">
+    <div class="list_products" *ngFor="let e of products">
+      <img [src]="e.img" class="img" />
+      <p class="product-name">{{ e.description }}</p>
+      <p class="product-price">{{ e.price | currency : "BRL" }}</p>
+      <p class="product-paymethod">{{ e.paymethod }}</p>
+      <app-button
+        title="Comprar"
+        width="12rem"
+        height="4rem"
+        (click)="goToDetails(e.id)"
+      ></app-button>
+    </div>
   </div>
 </div>
