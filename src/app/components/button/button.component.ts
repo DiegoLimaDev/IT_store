@@ -9,4 +9,5 @@ export class ButtonComponent {
   @Input() title = '';
   @Input() width = '';
   @Input() height = '';
+  @Input() disabled?: boolean;
 }

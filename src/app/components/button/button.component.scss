@@ -4,8 +4,11 @@
   color: var(--white);
   border-width: 0;
   cursor: pointer;
+}
 
-
+.disabled {
+  @extend .button;
+  background-color: grey;
 }
 
 .button:hover{
