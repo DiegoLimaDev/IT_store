@@ -1,0 +1,51 @@
+.container {
+  padding: 2rem;
+}
+
+.title {
+  font-size: 5rem;
+  color: var(--dark-blue);
+  font-weight: bold;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  margin: 0.5rem 1rem 0.5rem 0;
+  outline: none;
+  width: 75%;
+  padding: 0.5rem;
+}
+
+.textarea {
+  margin: 0.5rem 1rem 0.5rem 0;
+  outline: none;
+  width: 75.2%;
+  padding: 0.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.button {
+  width: fit-content;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+
+.warning {
+  font-size: 1.2rem;
+  color: var(--flag-red);
+  margin-left: .5rem;
+}

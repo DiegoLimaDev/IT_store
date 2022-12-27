@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <span class="title">Entre em contato conosco</span>
+      <form [formGroup]="this.formData" class="column">
+        <input
+          type="text"
+          placeholder="Digite seu nome"
+          class="input"
+          formControlName="name"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            this.formData.controls['name'].invalid &&
+            (this.formData.controls['name'].touched ||
+              this.formData.controls['name'].dirty)
+          "
+          >Nome inválido. Mínimo de 4 caracteres.</span
+        >
+        <input
+          type="text"
+          placeholder="Digite o assunto"
+          class="input"
+          formControlName="subject"
+          maxlength="20"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            this.formData.controls['subject'].invalid &&
+            this.formData.controls['subject'].touched
+          "
+          >Assunto é um campo obrigatório.</span
+        >
+        <input
+          type="text"
+          placeholder="Digite o telefone"
+          class="input"
+          formControlName="phone"
+          maxlength="14"
+          oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+          mask="(99)99999-9999"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            this.formData.controls['phone'].invalid &&
+            this.formData.controls['phone'].touched
+          "
+          >Number é um campo obrigatório.</span
+        >
+        <input
+          type="email"
+          placeholder="Digite seu email"
+          class="input"
+          formControlName="email"
+        />
+        <span
+          class="warning"
+          *ngIf="
+            this.formData.controls['email'].invalid &&
+            this.formData.controls['email'].touched
+          "
+          >Email é um campo obrigatório.</span
+        >
+        <textarea
+          cols="30"
+          rows="10"
+          placeholder="Digite sua mensagem..."
+          class="textarea"
+          formControlName="msg"
+        ></textarea>
+        <span
+          class="warning"
+          *ngIf="
+            this.formData.controls['msg'].invalid &&
+            this.formData.controls['msg'].touched
+          "
+          >Mensagem é um campo obrigatório.</span
+        >
+      </form>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2348.9057296606684!2d-34.871772929164706!3d-8.063401492469232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a48f03c145%3A0xef4ac38fd080a24!2sPra%C3%A7a%20do%20Marco%20Zero!5e0!3m2!1spt-BR!2sbr!4v1672151645228!5m2!1spt-BR!2sbr"
+      width="800"
+      height="600"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
+<app-button
+  title="Enviar"
+  height="5rem"
+  width="12rem"
+  class="button"
+  [disabled]="this.formData.invalid ? true : false"
+  (click)="this.sendMessage('Mensagem enviada com sucesso.')"
+></app-button>
