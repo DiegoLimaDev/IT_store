@@ -18,6 +18,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./components/cart/cart.module').then((m) => m.CartModule),
   },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./components/contact/contact.module').then(
+        (m) => m.ContactModule
+      ),
+  },
   { path: '**', component: NotFoundComponent },
 ];
 
