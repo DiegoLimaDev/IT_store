@@ -4,6 +4,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'products', pathMatch: 'full' },
   {
     path: 'products',
     loadChildren: () =>
@@ -11,7 +12,6 @@ const routes: Routes = [
         (m) => m.ProductsModule
       ),
   },
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
   { path: 'products/:id', component: ProductDetailsComponent },
   {
     path: 'cart',
