@@ -11,6 +11,8 @@ const routes: Routes = [
       import('./components/products/products.module').then(
         (m) => m.ProductsModule
       ),
+    redirectTo: 'products',
+    pathMatch: 'full',
   },
   { path: 'products/:id', component: ProductDetailsComponent },
   {
